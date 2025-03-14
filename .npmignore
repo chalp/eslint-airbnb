@@ -1,11 +1,8 @@
 *
-
-!/base.js
-!/index.js
+!/base/**/*
 !/lib/**/*
-
+!/react/**/*
+!/typescript/**/*
 !/package.json
-
-!/CHANGELOG.md
-!/LICENCE
 !/README.md
+!/LICENSE

@@ -1,2 +1,5 @@
 /.eslintcache
 /node_modules
+*.tgz
+.vscode
+.idea
