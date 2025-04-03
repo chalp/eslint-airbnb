@@ -1,8 +1,8 @@
-const { configs: react } = require('./react');
-const { configs: imports } = require('./imports');
-const { configs: reactA11y } = require('./react-a11y');
-const { configs: reactHooks } = require('./react-hooks');
-const { configs: stylisticJsx } = require('./jsx-stylistic');
+import { configs as react } from './react.js';
+import { configs as imports } from './imports.js';
+import { configs as reactA11y } from './react-a11y.js';
+import { configs as reactHooks } from './react-hooks.js';
+import { configs as stylisticJsx } from './jsx-stylistic.js';
 
 const configs = [
   ...react,
@@ -12,4 +12,4 @@ const configs = [
   ...stylisticJsx,
 ];
 
-module.exports = configs;
+export default configs;

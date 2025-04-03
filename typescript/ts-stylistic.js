@@ -1,7 +1,7 @@
-const tsEsLint = require('typescript-eslint');
-const stylisticTs = require('@stylistic/eslint-plugin-ts');
-const { rules: baseStylisticRules } = require('../base/stylistic');
-const { allTsFiles } = require('../lib/files');
+import tsEsLint from 'typescript-eslint';
+import stylisticTs from '@stylistic/eslint-plugin-ts';
+import { rules as baseStylisticRules } from '../base/stylistic.js';
+import { allTsFiles } from '../lib/files.js';
 
 const files = allTsFiles;
 
@@ -70,7 +70,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

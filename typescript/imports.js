@@ -1,5 +1,5 @@
-const tsEsLint = require('typescript-eslint');
-const eslintPluginImport = require('eslint-plugin-import');
+import tsEsLint from 'typescript-eslint';
+import eslintPluginImport from 'eslint-plugin-import';
 
 const rules = {
   // The following rules are enabled in Airbnb config,
@@ -26,7 +26,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

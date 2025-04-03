@@ -1,4 +1,4 @@
-const reactHooks = require('eslint-plugin-react-hooks');
+import reactHooks from 'eslint-plugin-react-hooks';
 
 const rules = {
   // Enforce Rules of Hooks
@@ -18,7 +18,7 @@ const configs = [
 
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

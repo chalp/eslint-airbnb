@@ -1,9 +1,9 @@
-const globals = require('globals');
-const airbnbBase = require('./base');
+import globals from 'globals';
+import base from './base/index.js';
 
-module.exports = [
+export default [
   { ignores: ['node_modules/'] },
-  ...airbnbBase,
+  ...base,
   {
     languageOptions: {
       ecmaVersion: 2018,
@@ -18,6 +18,7 @@ module.exports = [
     files: ['**/*.*js'],
     rules: {
       'import/no-unresolved': 'off', // Doesn't support imports without a "main" field
+      'import/extensions': ['error', 'always'],
     },
   },
 ];

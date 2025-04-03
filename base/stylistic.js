@@ -1,4 +1,4 @@
-const stylisticJs = require('@stylistic/eslint-plugin-js');
+import stylisticJs from '@stylistic/eslint-plugin-js';
 
 const rules = {
   // disallow the use of leading or trailing decimal points in numeric literals
@@ -383,7 +383,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

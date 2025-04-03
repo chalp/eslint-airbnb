@@ -13,7 +13,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

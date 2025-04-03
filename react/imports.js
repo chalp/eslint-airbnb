@@ -1,4 +1,4 @@
-const eslintPluginImport = require('eslint-plugin-import');
+import eslintPluginImport from 'eslint-plugin-import';
 
 const rules = {};
 
@@ -6,7 +6,7 @@ const configs = [
   eslintPluginImport.flatConfigs.react,
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

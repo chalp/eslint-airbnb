@@ -1,4 +1,4 @@
-const confusingBrowserGlobals = require('../lib/confusing-browser-globals');
+import confusingBrowserGlobals from '../lib/confusing-browser-globals.js';
 
 const rules = {
   // enforce or disallow variable initializations at definition
@@ -63,7 +63,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

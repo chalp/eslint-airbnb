@@ -1,6 +1,6 @@
-const reactPlugin = require('eslint-plugin-react');
-const { rules: baseStyleRules } = require('../base/style');
-const { allSxFiles } = require('../lib/files');
+import reactPlugin from 'eslint-plugin-react';
+import { rules as baseStyleRules } from '../base/style.js';
+import { allSxFiles } from '../lib/files.js';
 
 const files = allSxFiles;
 
@@ -475,7 +475,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

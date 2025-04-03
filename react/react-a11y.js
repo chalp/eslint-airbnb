@@ -1,5 +1,5 @@
-const jsxA11y = require('eslint-plugin-jsx-a11y');
-const { allSxFiles } = require('../lib/files');
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import { allSxFiles } from '../lib/files.js';
 
 const files = allSxFiles;
 
@@ -255,7 +255,7 @@ const configs = [
 
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

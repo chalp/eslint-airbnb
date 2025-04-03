@@ -1,9 +1,9 @@
-const tsEsLint = require('typescript-eslint');
-const { rules: baseBestPracticesRules } = require('../base/best-practices');
-const { rules: baseES6Rules } = require('../base/es6');
-const { rules: baseStyleRules } = require('../base/style');
-const { rules: baseVariablesRules } = require('../base/variables');
-const { allTsFiles } = require('../lib/files');
+import tsEsLint from 'typescript-eslint';
+import { rules as baseBestPracticesRules } from '../base/best-practices.js';
+import { rules as baseES6Rules } from '../base/es6.js';
+import { rules as baseStyleRules } from '../base/style.js';
+import { rules as baseVariablesRules } from '../base/variables.js';
+import { allTsFiles } from '../lib/files.js';
 
 const files = allTsFiles;
 
@@ -114,7 +114,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

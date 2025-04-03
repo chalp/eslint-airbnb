@@ -1,4 +1,4 @@
-const jsxStylistic = require('@stylistic/eslint-plugin-jsx');
+import jsxStylistic from '@stylistic/eslint-plugin-jsx';
 
 const rules = {
 
@@ -106,7 +106,7 @@ const configs = [
   },
 ];
 
-module.exports = {
+export {
   rules,
   configs,
 };

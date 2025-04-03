@@ -1,6 +1,6 @@
-const { configs: tsEsLint } = require('./ts-es-lint');
-const { configs: tsImport } = require('./imports');
-const { configs: tsStylistic } = require('./ts-stylistic');
+import { configs as tsEsLint } from './ts-es-lint.js';
+import { configs as tsImport } from './imports.js';
+import { configs as tsStylistic } from './ts-stylistic.js';
 
 const configs = [
   ...tsEsLint,
@@ -8,4 +8,4 @@ const configs = [
   ...tsStylistic,
 ];
 
-module.exports = configs;
+export default configs;
