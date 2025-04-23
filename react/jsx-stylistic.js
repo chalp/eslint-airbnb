@@ -1,5 +1,9 @@
 import jsxStylistic from '@stylistic/eslint-plugin-jsx';
 
+import { allSxFiles } from '../lib/files.js';
+
+const files = allSxFiles;
+
 const rules = {
 
   // Specify whether double or single quotes should be used in JSX attributes
@@ -99,6 +103,7 @@ const rules = {
 
 const configs = [
   {
+    files,
     plugins: {
       '@stylistic/jsx': jsxStylistic,
     },
