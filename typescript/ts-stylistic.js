@@ -1,66 +1,67 @@
 import tsEsLint from 'typescript-eslint';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
+import stylistic from '@stylistic/eslint-plugin';
 import { rules as baseStylisticRules } from '../base/stylistic.js';
 import { allTsFiles } from '../lib/files.js';
 
 const files = allTsFiles;
 
 const rules = {
-  '@stylistic/ts/brace-style': baseStylisticRules['@stylistic/js/brace-style'],
+  '@stylistic/brace-style': baseStylisticRules['@stylistic/brace-style'],
 
-  '@stylistic/ts/comma-dangle': [
-    baseStylisticRules['@stylistic/js/comma-dangle'][0],
+  '@stylistic/comma-dangle': [
+    baseStylisticRules['@stylistic/comma-dangle'][0],
     {
-      ...baseStylisticRules['@stylistic/js/comma-dangle'][1],
-      enums: baseStylisticRules['@stylistic/js/comma-dangle'][1].arrays,
-      generics: baseStylisticRules['@stylistic/js/comma-dangle'][1].arrays,
-      tuples: baseStylisticRules['@stylistic/js/comma-dangle'][1].arrays,
+      ...baseStylisticRules['@stylistic/comma-dangle'][1],
+      enums: baseStylisticRules['@stylistic/comma-dangle'][1].arrays,
+      generics: baseStylisticRules['@stylistic/comma-dangle'][1].arrays,
+      tuples: baseStylisticRules['@stylistic/comma-dangle'][1].arrays,
     },
   ],
 
-  '@stylistic/ts/comma-spacing': baseStylisticRules['@stylistic/js/comma-spacing'],
+  '@stylistic/comma-spacing': baseStylisticRules['@stylistic/comma-spacing'],
 
-  '@stylistic/ts/func-call-spacing': baseStylisticRules['@stylistic/js/func-call-spacing'],
+  '@stylistic/function-call-spacing': baseStylisticRules['@stylistic/function-call-spacing'],
 
   indent: 'off',
-  '@stylistic/ts/indent': baseStylisticRules['@stylistic/js/indent'],
+  '@stylistic/indent': baseStylisticRules['@stylistic/indent'],
 
   'keyword-spacing': 'off',
-  '@stylistic/ts/keyword-spacing': baseStylisticRules['@stylistic/js/keyword-spacing'],
+  '@stylistic/keyword-spacing': baseStylisticRules['@stylistic/keyword-spacing'],
 
   'lines-between-class-members': 'off',
-  '@stylistic/ts/lines-between-class-members': baseStylisticRules['@stylistic/js/lines-between-class-members'],
+  '@stylistic/lines-between-class-members': baseStylisticRules['@stylistic/lines-between-class-members'],
 
   'no-extra-parens': 'off',
-  '@stylistic/ts/no-extra-parens': baseStylisticRules['@stylistic/js/no-extra-parens'],
+  '@stylistic/no-extra-parens': baseStylisticRules['@stylistic/no-extra-parens'],
 
   'no-extra-semi': 'off',
-  '@stylistic/ts/no-extra-semi': baseStylisticRules['@stylistic/js/no-extra-semi'],
+  '@stylistic/no-extra-semi': baseStylisticRules['@stylistic/no-extra-semi'],
 
   'space-before-blocks': 'off',
-  '@stylistic/ts/space-before-blocks': baseStylisticRules['@stylistic/js/space-before-blocks'],
+  '@stylistic/space-before-blocks': baseStylisticRules['@stylistic/space-before-blocks'],
 
   quotes: 'off',
-  '@stylistic/ts/quotes': baseStylisticRules['@stylistic/js/quotes'],
+  '@stylistic/quotes': baseStylisticRules['@stylistic/quotes'],
 
   semi: 'off',
-  '@stylistic/ts/semi': baseStylisticRules['@stylistic/js/semi'],
+  '@stylistic/semi': baseStylisticRules['@stylistic/semi'],
 
   'space-before-function-paren': 'off',
-  '@stylistic/ts/space-before-function-paren': baseStylisticRules['@stylistic/js/space-before-function-paren'],
+  '@stylistic/space-before-function-paren': baseStylisticRules['@stylistic/space-before-function-paren'],
 
   'space-infix-ops': 'off',
-  '@stylistic/ts/space-infix-ops': baseStylisticRules['@stylistic/js/space-infix-ops'],
+  '@stylistic/space-infix-ops': baseStylisticRules['@stylistic/space-infix-ops'],
 
   'object-curly-spacing': 'off',
-  '@stylistic/ts/object-curly-spacing': baseStylisticRules['@stylistic/js/object-curly-spacing'],
+  '@stylistic/object-curly-spacing': baseStylisticRules['@stylistic/object-curly-spacing'],
+  '@stylistic/padding-line-between-statements': baseStylisticRules['@stylistic/padding-line-between-statements'],
 };
 
 const configs = [
   {
     files,
     plugins: {
-      '@stylistic/ts': stylisticTs,
+      '@stylistic': stylistic,
     },
     languageOptions: {
       parser: tsEsLint.parser,

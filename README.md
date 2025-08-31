@@ -28,9 +28,7 @@ Enhances Airbnb's ESLint config with TypeScript support
    node: >=22
    eslint: >=9.0.0
    typescript-eslint: >=8.0.0
-   @stylistic/eslint-plugin-js: >= 3.0.0,
-   @stylistic/eslint-plugin-jsx: >= 3.0.0,
-   @stylistic/eslint-plugin-ts": >= 3.0.0,
+   @stylistic/eslint-plugin: >= 4.0.0,
    eslint-plugin-import": >= 2.0.0,
    eslint-plugin-jsx-a11y": >= 6.0.0,
    eslint-plugin-react": >= 7.0.0,
