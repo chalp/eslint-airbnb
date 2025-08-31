@@ -80,7 +80,7 @@ const rules = {
   '@stylistic/block-spacing': ['error', 'always'],
 
   // enforce one true brace style
-  '@stylistic/brace-style': ['error', 'stroustrup'],
+  '@stylistic/brace-style': ['error', '1tbs'],
 
   // require trailing commas in multiline object literals
   '@stylistic/comma-dangle': ['error', {
@@ -297,7 +297,7 @@ const rules = {
   // https://eslint.org/docs/rules/padding-line-between-statements
   '@stylistic/padding-line-between-statements': ['error',
     // require a blank line after any block (e.g. function, if, loop) before the next statement
-    { blankLine: 'always', prev: 'block', next: '*' },
+    { blankLine: 'always', prev: 'block-like', next: '*' },
   ],
 
   // require quotes around object literal property names
