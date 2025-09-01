@@ -168,6 +168,18 @@ const rules = {
       selector: 'WithStatement',
       message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
     },
+    {
+      selector: 'ReturnStatement > CallExpression',
+      message: 'Avoid function calls in return statements. Use intermediate variables instead.',
+    },
+    {
+      selector: 'ReturnStatement > BinaryExpression[operator!="==="][operator!="!=="]',
+      message: 'Avoid complex binary operations in return statements. Use intermediate variables instead.',
+    },
+    {
+      selector: 'ReturnStatement > MemberExpression',
+      message: 'Avoid member expressions in return statements. Use intermediate variables instead.',
+    },
   ],
 
   // disallow space between function identifier and application
