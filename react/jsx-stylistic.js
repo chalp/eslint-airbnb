@@ -1,4 +1,4 @@
-import { default as stylisticPlugin } from '@stylistic/eslint-plugin';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 
 import { allSxFiles } from '../lib/files.js';
 

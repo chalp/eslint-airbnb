@@ -143,16 +143,6 @@ const rules = {
 
 const configs = [
   {
-    languageOptions: {
-      sourceType: 'module',
-      ecmaVersion: 2018,
-      parserOptions: {
-        ecmaFeatures: {
-          generators: false,
-          objectLiteralDuplicateProperties: false,
-        },
-      },
-    },
     rules,
   },
 ];

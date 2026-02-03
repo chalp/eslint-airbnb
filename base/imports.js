@@ -257,6 +257,10 @@ const configs = [
   {
     ...importPlugin.flatConfigs.recommended,
     rules,
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'module',
+    },
   },
 ];
 

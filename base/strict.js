@@ -6,10 +6,6 @@ const rules = {
 const configs = [
   {
     rules,
-    languageOptions: {
-      sourceType: 'module',
-      ecmaVersion: 2018,
-    },
   },
 ];
 

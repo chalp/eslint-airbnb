@@ -1,4 +1,4 @@
-import { default as stylisticPlugin } from '@stylistic/eslint-plugin';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 
 const rules = {
   // disallow the use of leading or trailing decimal points in numeric literals
@@ -375,10 +375,6 @@ const rules = {
 
 const configs = [
   {
-    languageOptions: {
-      sourceType: 'module',
-      ecmaVersion: 2018,
-    },
     plugins: {
       '@stylistic': stylisticPlugin,
     },

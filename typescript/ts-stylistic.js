@@ -1,5 +1,5 @@
 import parser from '@typescript-eslint/parser';
-import { default as stylisticPlugin } from '@stylistic/eslint-plugin';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 import { rules as baseStylisticRules } from '../base/stylistic.js';
 import { allTsFiles } from '../lib/files.js';
 
