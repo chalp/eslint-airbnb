@@ -1,0 +1,7 @@
+{
+  "extends": ["@tsconfig/node22/tsconfig"],
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

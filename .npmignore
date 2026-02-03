@@ -1,0 +1,8 @@
+*
+!/base/**/*
+!/lib/**/*
+!/react/**/*
+!/typescript/**/*
+!/package.json
+!/README.md
+!/LICENSE

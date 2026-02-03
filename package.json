@@ -1,0 +1,54 @@
+{
+  "name": "@chalp/eslint-airbnb",
+  "version": "1.4.1",
+  "description": "Airbnb's ESLint config with TypeScript support",
+  "type": "module",
+  "exports": {
+    "./base": {
+      "types": "./base/index.d.ts",
+      "default": "./base/index.js"
+    },
+    "./react": {
+      "types": "./react/index.d.ts",
+      "default": "./react/index.js"
+    },
+    "./typescript": {
+      "types": "./typescript/index.d.ts",
+      "default": "./typescript/index.js"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@stylistic/eslint-plugin": ">=4.0.0",
+    "@typescript-eslint/eslint-plugin": ">=8.0.0",
+    "@typescript-eslint/parser": ">=8.0.0",
+    "eslint": ">=9.0.0",
+    "eslint-plugin-import": ">=2.0.0",
+    "eslint-plugin-jsx-a11y": ">=6.0.0",
+    "eslint-plugin-react": ">=7.0.0",
+    "eslint-plugin-react-hooks": ">=5.0.0",
+    "eslint-import-resolver-typescript": ">=3.0.0"
+  },
+  "devDependencies": {
+    "globals": "^16",
+    "@stylistic/eslint-plugin": "^5",
+    "@typescript-eslint/eslint-plugin": "^8",
+    "@typescript-eslint/parser": "^8",
+    "eslint": "^9",
+    "eslint-plugin-import": "^2",
+    "eslint-plugin-jsx-a11y": "^6",
+    "eslint-plugin-react": "^7",
+    "eslint-plugin-react-hooks": "^7",
+    "eslint-import-resolver-typescript": "^4",
+    "@tsconfig/node22": "^22",
+    "typescript": "5"
+  },
+  "keywords": [
+    "airbnb",
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "styleguide",
+    "typescript"
+  ]
+}
