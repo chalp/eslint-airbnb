@@ -7,30 +7,6 @@ import { allTsFiles } from '../lib/files.js';
 
 const files = allTsFiles;
 
-// Собираем правила из конфигурации `eslint-recommended` плагина.
-// В некоторых сборках `configs['eslint-recommended'].overrides` — массив с объектами
-// вида { files, rules }, поэтому нужно аккуратно собрать все `rules`.
-const eslintRecommendedRules = (() => {
-  const cfg = tsEsLint && tsEsLint.configs && tsEsLint.configs['eslint-recommended'];
-
-  if (!cfg) {
-    return {};
-  }
-
-  const overrides = cfg.overrides || [];
-
-  // overrides может быть объектом с полем rules или массивом
-  if (Array.isArray(overrides)) {
-    const merged = {};
-    overrides.forEach((o) => Object.assign(merged, o.rules || {}));
-
-    return merged;
-  }
-
-  // если overrides — объект
-  return overrides.rules || {};
-})();
-
 const rules = {
   camelcase: 'off',
   '@typescript-eslint/naming-convention': [
@@ -115,26 +91,11 @@ const rules = {
 };
 
 const configs = [
-  ...(tsEsLint.configs.recommended.map((conf) => ({
-    ...conf,
-    files,
-  }))),
+  tsEsLint.configs['flat/eslint-recommended'],
+  ...tsEsLint.configs['flat/recommended'],
   {
     files,
     rules,
-  },
-  {
-    files,
-    rules: {
-      // The following rules are enabled in Airbnb config, but are
-      // already checked (more thoroughly) by the TypeScript compiler
-      // Some of the rules also fail in TypeScript files, for example:
-      // https://github.com/typescript-eslint/typescript-eslint/issues/662#issuecomment-507081586
-      // Rules are inspired by:
-      // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/eslint-recommended.ts
-      ...eslintRecommendedRules,
-
-    },
   },
 ];
 

@@ -1,9 +1,12 @@
 import globals from 'globals';
-import base from './base/index.js';
+import airbnbBase from './base/index.js';
+import airbnbTypescript from './typescript/index.js';
+import airbnbReact from './react/index.js';
 
 export default [
-  { ignores: ['node_modules/'] },
-  ...base,
+  ...airbnbBase,
+  ...airbnbTypescript,
+  ...airbnbReact,
   {
     languageOptions: {
       ecmaVersion: 2022,
